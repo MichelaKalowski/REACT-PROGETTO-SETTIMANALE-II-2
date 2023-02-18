@@ -29,7 +29,7 @@ function App() {
   }, [city]);
   return (
     <div>
-        <CustomNavBar
+        <CustomNavBar className="navBar"
           city={city}
           handleChange={handleChange}
           setCity={setCity}

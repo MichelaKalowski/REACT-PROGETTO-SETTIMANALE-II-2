@@ -1,8 +1,11 @@
 body {
-  background: url(https://img.freepik.com/premium-vector/sky-background-video-conferencing_23-2148616500.jpg?size=626&ext=jpg&ga=GA1.1.444178615.1676645175&semt=ais);
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCVnoKnweHDy-dB_oa0vG3Bm2Hypw-Kh67Sw&usqp=CAU);
+  /*background-color: rgb(77, 129, 197);*/
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
+
 .search{
   margin-left: 20px;
 }
@@ -11,10 +14,14 @@ body {
   padding: 5px;
   margin: 10px;
   width: 100px;
+  color: rgb(70, 70, 243);
+  border-color:rgb(70, 70, 243); 
+
   
 }
 .button:hover{
   font-weight: bold;
+  transform: scale(1.1);
 }
 li{
   text-decoration: none;
@@ -28,6 +35,12 @@ h3{
 }
 .strong{
   font-weight: bolder;
-  color: gray;
+  color: orange;
   font-size: 25px;
+}
+.card{
+  cursor: pointer;
+}
+.card:hover{
+  transform: scale(1.1);
 }

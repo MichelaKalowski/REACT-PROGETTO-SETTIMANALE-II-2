@@ -18,7 +18,7 @@ function Forecast({ forecast }) {
               <Col xs={12} sm={6} md={4} lg={3}>
                 <Card
                   style={{ margin: "10px" }}
-                  className="mt-5 mx-3"
+                  className="card mt-5 mx-3"
                   key={f.id}
                   width="100%"
                 >
@@ -36,7 +36,7 @@ function Forecast({ forecast }) {
                         <FaCalendarDay
                           size="2em"
                           className="icons ms-4"
-                          color="gray"
+                          color="orange"
                         />
                       </p>
                       <p>
@@ -46,7 +46,7 @@ function Forecast({ forecast }) {
                         <WiTime2
                           size="2.5em"
                           className="icons ms-4"
-                          color="gray"
+                          color="orange"
                         />
                       </p>
                       <p>
