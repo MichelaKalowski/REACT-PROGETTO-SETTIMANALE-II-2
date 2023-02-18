@@ -18,7 +18,7 @@ function Forecast({ forecast }) {
               <Col xs={12} sm={6} md={4} lg={3}>
                 <Card
                   style={{ margin: "10px" }}
-                  className="card mt-5 mx-3"
+                  className="card my-5 mx-3"
                   key={f.id}
                   width="100%"
                 >
@@ -54,16 +54,19 @@ function Forecast({ forecast }) {
                           size="1.5em"
                           className="icons me-4"
                         />
-                        Weather: {f.weather[0].main}
+                        <span className="span">Weather: </span>
+                        {f.weather[0].main}
                       </p>
                       <p>
                         <FaTemperatureLow size="1.5em" className="icons me-4" />
-                        Temperature: {f.main.temp}°C
+                        <span className="span">Temperature: </span>
+                        {f.main.temp}°C
                       </p>
 
                       <p>
                         <WiHumidity size="2em" className="icons me-4" />
-                        Umidity: {f.main.humidity}%
+                        <span className="span">Umidity:</span> {f.main.humidity}
+                        %
                       </p>
                     </Card.Text>
                   </Card.Body>

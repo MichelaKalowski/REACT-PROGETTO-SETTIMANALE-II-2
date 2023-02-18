@@ -7,23 +7,25 @@ function CustomNavBar({ city, handleChange, setCity }) {
   return (
     <>
       <Navbar bg="white">
-        <Container>
-          <div className="text-center">
+        <Container className="d-flex justify-content-center">
+          <div>
             <Navbar.Brand href="#home">
               <img src={logo} alt="Logo" className="logo" width="70%" />
             </Navbar.Brand>
           </div>
-          <form>
-            <input
-              type="text"
-              placeholder="Search city"
-              value={city}
-              onChange={(event) => setCity(event.target.value)}
-            />
-            <button className="button" type="submit" onClick={handleChange}>
-              Search
-            </button>
-          </form>
+          <div>
+            <form>
+              <input
+                type="text"
+                placeholder="Search city"
+                value={city}
+                onChange={(event) => setCity(event.target.value)}
+              />
+              <button className="button" type="submit" onClick={handleChange}>
+                Search
+              </button>
+            </form>
+          </div>
         </Container>
       </Navbar>
     </>

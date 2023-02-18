@@ -10,6 +10,7 @@ function App() {
 
   const [city, setCity] = useState("");
   const [forecast, setForecast] = useState(null);
+  const [error, setError] = useState(false);
   const handleChange = async (event) => {
     event.preventDefault();
     if (city !== "") {
@@ -18,9 +19,10 @@ function App() {
         const response = await fetch("http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=a9eb23f6cf3ae4647ddef300a14f4587");
         const data = await response.json();
         setForecast(data.list);
+        setError(false);
       }  catch (err) {
         console.log("error")
-        setForecast(null);
+        setError(true);
        }
     }
   };
@@ -29,12 +31,12 @@ function App() {
   }, [city]);
   return (
     <div>
-        <CustomNavBar className="navBar"
+        <CustomNavBar
           city={city}
           handleChange={handleChange}
           setCity={setCity}
         />
-      {forecast ? <Forecast forecast={forecast} /> : <h2 className='text-center mt-5'>Error 404 Not Found</h2>}
+      {forecast ? <Forecast forecast={forecast} /> : forecast === null && error ? <h2 className='text-center mt-5'>Error 404 Not Found</h2> : null}
       
     </div>
      
