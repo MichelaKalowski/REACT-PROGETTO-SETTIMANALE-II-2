@@ -34,7 +34,7 @@ function App() {
           handleChange={handleChange}
           setCity={setCity}
         />
-       {forecast ? <Forecast forecast={forecast} /> : <h2 className='text-center mt-5'>404 PAGE NOT FOUND</h2>}
+      {forecast ? <Forecast forecast={forecast} /> : <h2 className='text-center mt-5'>Error 404 Not Found</h2>}
       
     </div>
      
