@@ -1,8 +1,10 @@
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import SearchCity from './components/SearchCity';
+
 import Forecast from './components/Forecast';
+import CustomNavBar from "./components/CustomNavBar";
 
 function App() {
 
@@ -18,6 +20,7 @@ function App() {
         setForecast(data.list);
       }  catch (err) {
         console.log("error")
+        setForecast(null);
        }
     }
   };
@@ -26,13 +29,12 @@ function App() {
   }, [city]);
   return (
     <div>
-      <h1 className="text-center mt-5">Weather Forecast</h1>
-      <SearchCity
-        city={city}
-        handleChange={handleChange}
-        setCity={setCity}
-      />
-      {forecast && <Forecast forecast={forecast} />}
+        <CustomNavBar
+          city={city}
+          handleChange={handleChange}
+          setCity={setCity}
+        />
+       {forecast ? <Forecast forecast={forecast} /> : <h2 className='text-center mt-5'>404 PAGE NOT FOUND</h2>}
       
     </div>
      

@@ -1,5 +1,5 @@
 body {
-  background: url(https://img.freepik.com/free-photo/beautiful-white-cloud_74190-3975.jpg?w=900&t=st=1676645185~exp=1676645785~hmac=85be81a742bb2067b4bfa6968f618b2df598e93789fac7663a2e86600b2b1c04);
+  background: url(https://img.freepik.com/premium-vector/sky-background-video-conferencing_23-2148616500.jpg?size=626&ext=jpg&ga=GA1.1.444178615.1676645175&semt=ais);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -10,6 +10,11 @@ body {
   border-radius: 10px;
   padding: 5px;
   margin: 10px;
+  width: 100px;
+  
+}
+.button:hover{
+  font-weight: bold;
 }
 li{
   text-decoration: none;
@@ -20,4 +25,9 @@ ul{
 h3{
   margin-left: 20px;
   margin-top: 30px;
+}
+.strong{
+  font-weight: bolder;
+  color: gray;
+  font-size: 25px;
 }
