@@ -1,5 +1,5 @@
 body {
-  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCVnoKnweHDy-dB_oa0vG3Bm2Hypw-Kh67Sw&usqp=CAU);
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvXSQ9Q6CR7wg5Uyp2u2lbXwxhUqxWkPBH1A&usqp=CAU);
   /*background-color: rgb(77, 129, 197);*/
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,14 +14,16 @@ body {
   padding: 5px;
   margin: 10px;
   width: 100px;
-  color: rgb(70, 70, 243);
-  border-color:rgb(70, 70, 243); 
+  color: rgb(5, 5, 58);
+  border-color:rgb(5, 5, 58);
+  background-color: orange;
 
   
 }
 .button:hover{
   font-weight: bold;
   transform: scale(1.1);
+  
 }
 li{
   text-decoration: none;
@@ -36,14 +38,42 @@ h3{
 .strong{
   font-weight: bolder;
   color: orange;
-  font-size: 25px;
+  font-size: 20px;
 }
 .card{
   cursor: pointer;
+ 
 }
 .card:hover{
   transform: scale(1.1);
 }
 .span{
   font-weight: bold;
+}
+h2{
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+.strong2{
+  font-size: 50px;
+  color: orange;
+  font-style: normal;
+}
+.footer-container{
+  width: 100%;
+  background-color: orange;
+position: fixed;
+  bottom: 0;
+  height: 80px;
+}
+.icons-footer{
+  margin-top: 35px;
+  color: rgb(5, 5, 58);;
+}
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
 }

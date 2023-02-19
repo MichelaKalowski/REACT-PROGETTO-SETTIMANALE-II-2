@@ -6,7 +6,7 @@ import logo from "../assets/logo.jpg";
 function CustomNavBar({ city, handleChange, setCity }) {
   return (
     <>
-      <Navbar bg="white">
+      <Navbar bg="white" className="navbar">
         <Container className="d-flex justify-content-center">
           <div>
             <Navbar.Brand href="#home">

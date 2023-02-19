@@ -5,6 +5,8 @@ import React, { useState, useEffect } from 'react';
 
 import Forecast from './components/Forecast';
 import CustomNavBar from "./components/CustomNavBar";
+import CustomFooter from "./components/CustomFooter";
+import earth from "../src/assets/earth.png";
 
 function App() {
 
@@ -36,8 +38,13 @@ function App() {
           handleChange={handleChange}
           setCity={setCity}
         />
-      {forecast ? <Forecast forecast={forecast} /> : forecast === null && error ? <h2 className='text-center mt-5'>Error 404 Not Found</h2> : null}
-      
+{forecast ? <Forecast forecast={forecast} /> : forecast === null && error ? <h2 className="text-center">Error 404 Not Found</h2> : forecast === null && !error ? <>
+<h2 className='text-center mt-5' style={{marginTop:"60px"}}><strong className="strong2 mt-5">Welcome! </strong><br /> You choose the city, we give you the weather forecast for the next five days.</h2>
+<div className="text-center mt-5">
+<img src={earth} style={{width: "20%"}} alt="earth" className='text-center'/>
+</div>
+</> : null}
+     <CustomFooter/> 
     </div>
      
   );

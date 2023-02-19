@@ -10,17 +10,17 @@ function Forecast({ forecast }) {
   return (
     <>
       {forecast.length === 0 ? (
-        <h2>404 PAGE NOT FOUND</h2>
+        <h2>Error 404 Not Found</h2>
       ) : (
         <Row>
           {forecast.map((f) => {
             return (
               <Col xs={12} sm={6} md={4} lg={3}>
                 <Card
-                  style={{ margin: "10px" }}
+                  style={{ margin: "10px", width: "15rem" }}
                   className="card my-5 mx-3"
                   key={f.id}
-                  width="100%"
+                  width="50%"
                 >
                   <Image
                     src={`http://openweathermap.org/img/w/${f.weather[0].icon}.png?mode=png`}
@@ -34,7 +34,7 @@ function Forecast({ forecast }) {
                           Day: {new Date(f.dt_txt).toLocaleDateString("it-IT")}
                         </strong>
                         <FaCalendarDay
-                          size="2em"
+                          size="1.5em"
                           className="icons ms-4"
                           color="orange"
                         />
@@ -44,27 +44,28 @@ function Forecast({ forecast }) {
                           Time: {new Date(f.dt_txt).toLocaleTimeString("it-IT")}
                         </strong>
                         <WiTime2
-                          size="2.5em"
+                          size="1.5em"
                           className="icons ms-4"
                           color="orange"
                         />
                       </p>
                       <p>
                         <TiWeatherPartlySunny
-                          size="1.5em"
-                          className="icons me-4"
+                          size="1em"
+                          FactoryReloaded
+                          className="icons me-2"
                         />
                         <span className="span">Weather: </span>
                         {f.weather[0].main}
                       </p>
                       <p>
-                        <FaTemperatureLow size="1.5em" className="icons me-4" />
+                        <FaTemperatureLow size="1em" className="icons me-2" />
                         <span className="span">Temperature: </span>
                         {f.main.temp}°C
                       </p>
 
                       <p>
-                        <WiHumidity size="2em" className="icons me-4" />
+                        <WiHumidity size="1.5em" className="icons me-2" />
                         <span className="span">Umidity:</span> {f.main.humidity}
                         %
                       </p>
