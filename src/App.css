@@ -63,7 +63,7 @@ h2{
 .footer-container{
   width: 100%;
   background-color: orange;
-position: sticky;
+position: fixed;
   bottom: 0;
   height: 80px;
   margin-top: 20px;

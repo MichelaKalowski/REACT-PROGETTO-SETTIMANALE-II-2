@@ -12,7 +12,7 @@ function Forecast({ forecast }) {
       <Row>
         {forecast.map((f) => {
           return (
-            <Col xs={12} sm={6} md={4} lg={3}>
+            <Col xs={12} sm={6} md={4} lg={3} className="mb-5">
               <Card
                 style={{ margin: "10px", width: "15rem" }}
                 className="card my-5 mx-3"
