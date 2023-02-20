@@ -63,13 +63,18 @@ h2{
 .footer-container{
   width: 100%;
   background-color: orange;
-position: fixed;
+position: sticky;
   bottom: 0;
   height: 80px;
+  margin-top: 20px;
 }
 .icons-footer{
   margin-top: 35px;
-  color: rgb(5, 5, 58);;
+  color: rgb(5, 5, 58);
+  cursor: pointer;
+}
+.icons-footer:hover{
+transform: scale(1.3);
 }
 .navbar{
   position: sticky;

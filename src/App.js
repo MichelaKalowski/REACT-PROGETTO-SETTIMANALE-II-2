@@ -20,10 +20,16 @@ function App() {
 
         const response = await fetch("http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=a9eb23f6cf3ae4647ddef300a14f4587");
         const data = await response.json();
-        setForecast(data.list);
-        setError(false);
+        if (data.cod === '404') {
+            setError(true);
+        } else {
+            setForecast(data.list);
+            console.log(forecast);
+            setError(false);
+        }
       }  catch (err) {
         console.log("error")
+       
         setError(true);
        }
     }
@@ -38,12 +44,13 @@ function App() {
           handleChange={handleChange}
           setCity={setCity}
         />
-{forecast ? <Forecast forecast={forecast} /> : forecast === null && error ? <h2 className="text-center">Error 404 Not Found</h2> : forecast === null && !error ? <>
+{forecast ? <Forecast forecast={forecast} /> : forecast === null && error ? <h2 className="text-center mt-5">Locality Not Found!</h2> : forecast === null && !error ? <>
 <h2 className='text-center mt-5' style={{marginTop:"60px"}}><strong className="strong2 mt-5">Welcome! </strong><br /> You choose the city, we give you the weather forecast for the next five days.</h2>
 <div className="text-center mt-5">
 <img src={earth} style={{width: "20%"}} alt="earth" className='text-center'/>
 </div>
 </> : null}
+
      <CustomFooter/> 
     </div>
      
